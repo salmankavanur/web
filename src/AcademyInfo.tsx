@@ -11,9 +11,34 @@ const AcademyInfo: React.FC = () => (
           Surayya is the alumnae network formed by the 6th Batch of <strong>Daiya Islamic Academy for Women</strong>. 
           Dedicated to continuous learning and community impact, we bring you Habiba v4.0.
         </p>
-        <Link to="/academy" className="nav-link" style={{ fontSize: '1rem', fontWeight: 700, color: '#4a7fff', textDecoration: 'underline' }}>
-          Learn more about our Academy and Vision →
+        <Link to="/academy" style={{ 
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '12px 24px',
+          background: 'rgba(74,127,255,0.1)',
+          border: '1px solid rgba(74,127,255,0.2)',
+          borderRadius: '12px',
+          color: '#fff',
+          textDecoration: 'none',
+          fontSize: '0.95rem',
+          fontWeight: 600,
+          transition: 'all 0.3s ease'
+        }}
+        onMouseOver={e => {
+          e.currentTarget.style.background = 'rgba(74,127,255,0.2)';
+          e.currentTarget.style.borderColor = 'rgba(74,127,255,0.4)';
+          e.currentTarget.style.transform = 'translateY(-2px)';
+        }}
+        onMouseOut={e => {
+          e.currentTarget.style.background = 'rgba(74,127,255,0.1)';
+          e.currentTarget.style.borderColor = 'rgba(74,127,255,0.2)';
+          e.currentTarget.style.transform = 'translateY(0)';
+        }}>
+          Learn more about our Academy and Vision
+          <span style={{ transition: 'transform 0.3s' }}>→</span>
         </Link>
+
       </div>
       <div style={{ flex: '0 0 300px', display: 'flex', justifyContent: 'center' }}>
          <div style={{ width: 120, height: 120, borderRadius: 24, background: 'linear-gradient(135deg,rgba(35,85,212,0.1),rgba(74,127,255,0.1))', border: '1px solid rgba(74,127,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3rem' }}>
