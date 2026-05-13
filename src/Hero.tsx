@@ -51,20 +51,25 @@ const Hero: React.FC = () => (
           </div>
 
           {/* Stats row */}
-          <div className="fade-up fade-up-4" style={{ display: 'flex', flexWrap: 'wrap', borderTop: '1px solid rgba(74,127,255,0.15)', paddingTop: 36 }}>
+          <div className="fade-up fade-up-4 stats-row" style={{ 
+            display: 'flex', 
+            borderTop: '1px solid rgba(74,127,255,0.15)', 
+            paddingTop: 36,
+            gap: 12
+          }}>
             {[
               { num: '11', label: 'Days' },
               { num: '14–25', label: 'Age Group' },
               { num: '₹249', label: 'Only' },
               { num: '4.0', label: 'Edition' },
             ].map((s, i) => (
-
-              <div key={i} style={{ flex: '1 1 100px', paddingRight: 24, marginBottom: 12 }}>
-                <div className="stat-num">{s.num}</div>
-                <div className="stat-label">{s.label}</div>
+              <div key={i} className="stat-item" style={{ flex: 1, minWidth: 0 }}>
+                <div className="stat-num" style={{ fontSize: 'clamp(1.2rem, 4vw, 2.2rem)' }}>{s.num}</div>
+                <div className="stat-label" style={{ fontSize: 'clamp(0.6rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>{s.label}</div>
               </div>
             ))}
           </div>
+
         </div>
 
         {/* ── RIGHT COLUMN – Registration Card ── */}
@@ -107,8 +112,17 @@ const Hero: React.FC = () => (
           grid-template-columns: 1fr !important;
         }
       }
+      @media (max-width: 480px) {
+        .stats-row {
+          gap: 8px !important;
+        }
+        .stat-item {
+          text-align: center;
+        }
+      }
     `}</style>
   </section>
 );
 
 export default Hero;
+
