@@ -5,7 +5,7 @@ const WA_NUMBER = '918714407772';
 function buildWhatsAppURL(form: { name: string; phone: string; email: string; age: string }): string {
   const message =
     `Assalamu Alaikum! 🌙\n\n` +
-    `I'd like to apply for *Habiba v4.0* – 6th Batch.\n\n` +
+    `I'd like to apply for *Habiba v4.0*.\n\n` +
     `━━━━━━━━━━━━━━━━\n` +
     `👤 *Name:* ${form.name}\n` +
     `📱 *Phone:* ${form.phone}\n` +
@@ -13,6 +13,7 @@ function buildWhatsAppURL(form: { name: string; phone: string; email: string; ag
     `🎂 *Age Group:* ${form.age}\n` +
     `━━━━━━━━━━━━━━━━\n\n` +
     `Please confirm my seat. JazakAllah Khair! 🤍`;
+
 
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
 }
@@ -105,8 +106,9 @@ const Application: React.FC = () => {
                 Message Preview
               </div>
               <div style={{ fontFamily: 'monospace', fontSize: '0.82rem', lineHeight: 1.8, color: '#c8d8f0', whiteSpace: 'pre-line', minHeight: 120 }}>
-                {`Assalamu Alaikum! 🌙\n\nI'd like to apply for *Habiba v4.0* – 6th Batch.\n\n👤 Name: ${form.name || '___________'}\n📱 Phone: ${form.phone || '___________'}\n📧 Email: ${form.email || '___________'}\n🎂 Age: ${form.age || '___________'}`}
+                {`Assalamu Alaikum! 🌙\n\nI'd like to apply for *Habiba v4.0*.\n\n👤 Name: ${form.name || '___________'}\n📱 Phone: ${form.phone || '___________'}\n📧 Email: ${form.email || '___________'}\n🎂 Age: ${form.age || '___________'}`}
               </div>
+
               {preview && (
                 <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1px solid rgba(37,211,102,0.15)', fontSize: '0.75rem', color: '#4a6080' }}>
                   ✓ Message ready — click "Send on WhatsApp" to open

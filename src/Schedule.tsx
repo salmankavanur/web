@@ -59,8 +59,9 @@ const Schedule: React.FC = () => (
           ['⏱', 'Duration', '11 Days'],
           ['💻', 'Mode', 'Online'],
           ['🌐', 'Language', 'Malayalam'],
-          // ['👥', 'Batch', '6th Batch'],
+          ['🎓', 'Organized By', 'Surayya Alumnae'],
           ['💰', 'Fee', '₹249 Only'],
+
         ].map(([icon, label, val]) => (
           <div key={label} style={{
             background: 'rgba(10,22,40,0.6)',

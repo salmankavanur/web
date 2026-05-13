@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const features = [
   {
@@ -63,7 +64,12 @@ const Features: React.FC = () => (
         </div>
       ))}
     </div>
+    <div style={{ marginTop: 48, textAlign: 'center' }}>
+      <Link to="/curriculum" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '12px 28px' }}>View Detailed Syllabus →</Link>
+    </div>
+
   </section>
 );
+
 
 export default Features;

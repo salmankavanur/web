@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => (
   <footer style={{ borderTop: '1px solid rgba(74,127,255,0.1)', background: '#080f1e' }}>
@@ -9,7 +10,7 @@ const Footer: React.FC = () => (
         <h2 style={{ fontWeight: 900, fontSize: 'clamp(1.8rem,4vw,3rem)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: 24 }}>
           Your next 11 days<br />could change everything.
         </h2>
-        <a href="#apply" className="btn-primary" style={{ fontSize: '1.05rem', padding: '15px 36px' }}>Apply Now for ₹249 →</a>
+        <a href="/#apply" className="btn-primary" style={{ fontSize: '1.05rem', padding: '15px 36px' }}>Apply Now for ₹249 →</a>
       </div>
     </div>
 
@@ -18,19 +19,19 @@ const Footer: React.FC = () => (
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 40, marginBottom: 48 }}>
         {/* Brand */}
         <div>
-          <div style={{ fontWeight: 900, fontSize: '1.4rem', letterSpacing: '-0.02em', marginBottom: 6 }}>Surayya</div>
-          <div style={{ fontSize: '0.8rem', color: '#8fa3c8', lineHeight: 1.6 }}>Daiya Islamic Academy for Women<br />Alumnae</div>
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div style={{ fontWeight: 900, fontSize: '1.4rem', letterSpacing: '-0.02em', marginBottom: 6 }}>Surayya</div>
+            <div style={{ fontSize: '0.8rem', color: '#8fa3c8', lineHeight: 1.6 }}>Daiya Islamic Academy for Women<br />Alumnae</div>
+          </Link>
         </div>
 
-        {/* About */}
+        {/* Course */}
         <div>
           <div style={{ fontSize: '0.75rem', color: '#8fa3c8', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 16 }}>Course</div>
-          {['About Habiba', 'Schedule', 'Apply Now', 'Contact'].map(l => (
-            <a key={l} href="#" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none', transition: 'color 0.2s' }}
-               onMouseOver={e => (e.currentTarget.style.color = '#fff')}
-               onMouseOut={e => (e.currentTarget.style.color = '#c8d8f0')}
-            >{l}</a>
-          ))}
+          <Link to="/" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>Home</Link>
+          <Link to="/academy" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>About Academy</Link>
+          <Link to="/curriculum" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>Curriculum</Link>
+          <a href="/#apply" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>Apply Now</a>
         </div>
 
         {/* Contact */}
@@ -87,3 +88,4 @@ const Footer: React.FC = () => (
 );
 
 export default Footer;
+

@@ -15,11 +15,12 @@ const Hero: React.FC = () => (
         <div>
           {/* Badge row */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 28 }} className="fade-up fade-up-1">
-            <span className="badge badge-yellow">Girls Only</span>
-
-            <span className="badge badge-outline">Online Course</span>
+            <span className="badge badge-yellow">Surayya Alumnae</span>
+            <span className="badge badge-outline">4th Edition</span>
+            <span className="badge badge-outline">Girls Only</span>
             <span className="badge badge-blue">Limited Seats</span>
           </div>
+
 
           {/* Deadline strip */}
           <div className="deadline-ticker fade-up fade-up-1" style={{ marginBottom: 32, display: 'inline-flex' }}>
@@ -55,8 +56,9 @@ const Hero: React.FC = () => (
               { num: '11', label: 'Days' },
               { num: '14–25', label: 'Age Group' },
               { num: '₹249', label: 'Only' },
-              // { num: '6th', label: 'Batch' },
+              { num: '4.0', label: 'Edition' },
             ].map((s, i) => (
+
               <div key={i} style={{ flex: '1 1 100px', paddingRight: 24, marginBottom: 12 }}>
                 <div className="stat-num">{s.num}</div>
                 <div className="stat-label">{s.label}</div>
