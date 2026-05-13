@@ -59,7 +59,7 @@ const Schedule: React.FC = () => (
           ['⏱', 'Duration', '11 Days'],
           ['💻', 'Mode', 'Online'],
           ['🌐', 'Language', 'Malayalam'],
-          ['👥', 'Batch', '6th Batch'],
+          // ['👥', 'Batch', '6th Batch'],
           ['💰', 'Fee', '₹249 Only'],
         ].map(([icon, label, val]) => (
           <div key={label} style={{
