@@ -31,6 +31,7 @@ const Footer: React.FC = () => (
           <Link to="/" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>Home</Link>
           <Link to="/academy" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>About Academy</Link>
           <Link to="/curriculum" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>Curriculum</Link>
+          <Link to="/faq" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>FAQ</Link>
           <a href="/#apply" style={{ display: 'block', color: '#c8d8f0', fontSize: '0.9rem', marginBottom: 10, textDecoration: 'none' }}>Apply Now</a>
         </div>
 
